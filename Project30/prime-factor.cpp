@@ -6,21 +6,13 @@ public:
 	vector<int> of(int number)
 	{
 		vector<int> result = {};
-		if (number > 1)
+
+		for (int divisor = 2; number > 1; divisor++)
 		{
-			if (number == 4 || number == 6 || number == 9) {
-				for (int divisor = 2; number > 1; divisor++)
-				{
-					while (number % divisor == 0)
-					{
-						result.push_back(divisor);
-						number /= divisor;
-					}
-				}
-			}
-			else
+			while (number % divisor == 0)
 			{
-				result.push_back(number);
+				result.push_back(divisor);
+				number /= divisor;
 			}
 		}
 		return result;
