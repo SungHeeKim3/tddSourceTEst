@@ -1,7 +1,8 @@
 #include "pch.h"
+#include "../../Project30/prime-factor.cpp"
 
 TEST(TestCaseName, TestName) {
-  EXPECT_EQ(1, 1);
-  EXPECT_TRUE(true);
-  EXPECT_TRUE(true);
+	FrimeFactor pr;
+	vector<int> expected{};
+	EXPECT_EQ(expected, pr.of(1));
 }
